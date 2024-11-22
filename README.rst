@@ -1,7 +1,9 @@
+**Update 2024-11-22**  
+While DBSCAN++ theoretically has better worst-case time complexity than traditional DBSCAN, and this project has been implemented by Jennifer Jang et al in Cython/C++ to improve performance, I have found it to be **significantly** slower than other traditional DBSCAN implementations, such as the one provided in scikit-learn. Therefore, I have made my own implementation of DBSCAN++ in pure Python (to remove the hassle of having to setup Cython and Visual Studio on Windows), maximizing the use of NumPy and SciPy to provide competitive performance to other good DBSCAN implementations (such as the aforementioned scikit-learn implementation). You can find that implementation [here](https://github.com/aboood40091/dbscanpp-py/tree/master). Additionally, if the iterative DBSCAN++ still does not scale well to your data, you can find a distributed implementation of DBSCAN++ in PySpark [here](https://github.com/aboood40091/pyspark_dbscan/tree/dbscanpp).   
+
 DBSCAN++
 =====
 Fast and robust density-based clustering algorithm.
-
 
 Usage
 ======
